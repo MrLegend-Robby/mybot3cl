@@ -105,4 +105,4 @@ bott.on('message', (message) => {
     }
 });
 
-bott.login('NDUyMTc0NDg3Nzk4OTM5NjQ4.DfQHvg.3U4h4WX29CM97WXZbaRHfgq_3ps')
+bott.login(process.env.TOKEN)
