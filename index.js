@@ -5,7 +5,7 @@ const bott = new Discord.Client();
 const colors = ['92ce14', '4bd588', '4bd5b9', 'd54b76', '00edff', '0077ff', 'f2ff00', 'cbd073', 'd09573', 'f2070b',];
 function color () {
   colors.forEach(function (item, number) {
-      setTimeout(function () {bott.guilds.get('456532005580963850').roles.get('456533542743048192').setColor(item).catch();if(number === colors.length-1) setTimeout(function () {color()}, 1500)}, number*1500);
+      setTimeout(function () {bott.guilds.get('456532005580963850').roles.get('456533546580967429').setColor(item).catch();if(number === colors.length-1) setTimeout(function () {color()}, 1500)}, number*1500);
   });
 }
  
