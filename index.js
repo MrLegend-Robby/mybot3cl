@@ -8,6 +8,19 @@ function color () {
       setTimeout(function () {bott.guilds.get('456532005580963850').roles.get('456533546580967429').setColor(item).catch();if(number === colors.length-1) setTimeout(function () {color()}, 1500)}, number*1500);
   });
 }
+
+module.exports.run = async (bot, message, args) => {
+
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MESSAGES");
+  if(!args[0]) return message.channel.send("oof");
+  message.channel.bulkDelete(args[0]).then(() => {
+    message.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(5000));
+  });
+}
+
+module.exports.help = {
+  name: "clear"
+}
  
 bott.on('ready', () => {
   console.log(`Logged in as ${bott.user.tag}!`);
